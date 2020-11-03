@@ -43,3 +43,10 @@ select gender, SUM(salary) from employee_payroll_service group by gender;
 select gender, COUNT(salary) from employee_payroll_service group by gender;
 select gender, MIN(salary) from employee_payroll_service group by gender;
 select gender, MAX(salary) from employee_payroll_service group by gender;
+
+#UseCase8: 
+
+alter table employee_payroll_service
+add phone numeric(10) not null after name,
+add address varchar(200) not null default 'Mumbai' after phone,
+add department varchar(200) not null after address;
